@@ -1,38 +1,341 @@
-.App {
-  text-align: center;
+.logo
+{
+    margin-left: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.size
+{
+    width: 700px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loccolor
+{
+    background-color: white;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sechicon
+{
+    background-color: rgb(17, 56, 46);
+  
 }
 
-.App-link {
-  color: #61dafb;
+.loginbtn
+{
+    margin-left: 25px;
+    color:  rgb(17, 56, 46);   
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginbtn:hover{
+    text-decoration: none;
+
+}
+
+.manubtn
+{
+    float: left;
+    margin-left: 25px;
+    margin-top: 5px;
+font-size: 13px;
+cursor: pointer;
+color:  rgb(17, 56, 46);
+font-weight: 700;
+}
+
+.mainmanubtn
+{
+    float: left;
+    margin-left: 25px;
+    margin-top: 5px;
+font-size: 15px;
+cursor: pointer;
+color:  rgb(17, 56, 46);
+font-weight: 700;
+}
+.manubtn:hover
+{
+color:  rgb(71, 128, 113);
+text-decoration: none;
+}
+.mainmanubtn:hover{
+    color:  rgb(71, 128, 113);
+    text-decoration: none;
+}
+.banerheight
+{
+height: 300px;
+margin-top: 20px;
+}
+.box
+{
+
+
+height: 400px;
+margin-top: 100px;
+background-color: rgba(185, 183, 183, 0.678);
+color: rgb(17, 56, 46);
+}
+.cardpic
+{
+    height: 150px;
+}
+.cardheading
+{
+cursor: pointer;
+
+}
+.cardheading:hover
+{
+    text-decoration: underline;
+}
+
+.box2
+{
+margin-top: 100px;
+}
+.box3
+{
+margin-top: 40px;
+}
+.box4
+{
+margin-top: 40px;
+margin-left: 120px;
+}
+.olxstorepic
+{
+margin-top: 100px;
+}
+.catogeriesBox
+{
+
+height: 200px;
+background-color: rgba(185, 183, 183, 0.678);
+}
+.catogeriesInerBox
+{
+    
+height: 200px;
+float: left;
+}
+.catogeriesHeading
+{
+font-size: 15px;
+margin-top: 20px;
+cursor: pointer;
+color:  rgb(17, 56, 46);
+font-weight: 700;
+}
+.catogeriesHeadingOption
+{
+    font-size: 12px;
+    cursor: pointer;
+    color:  rgb(75, 173, 149);
+    font-weight: 700;
+}
+.catogeriesHeadingOption:hover
+{
+    color:  rgb(71, 128, 113);
+}
+.Icon 
+{
+margin-left: 20px;
+}
+.playStoreIcon
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.footerBox
+{
+
+    height: 50px;
+    background-color: rgb(17, 56, 46);
+}
+.BB 
+{
+  
+    height: 50px;
+    float: left;
+}
+.footerHeading1{
+    color: white;
+    margin-top: 10px;
+}
+.footerHeading2{
+    color: white;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+.ManuBox{
+    
+    height: 300px;
+float: left;
+
+}
+.ManuMainBoxLink{
+    font-size: 15px;
+    cursor: pointer;
+    color:  rgb(17, 56, 46);
+    font-weight: 700;
+    
+}
+
+.ManuMainBoxLink:hover{
+    color:  rgb(71, 128, 113);
+    text-decoration: none;
+}
+.ManuOptionLink{
+    font-size: 12px;
+    cursor: pointer;
+    color:  rgb(17, 56, 46);
+    font-weight: 700;
+}
+.ManuOptionLink:hover{
+    color:  rgb(71, 128, 113);
+    text-decoration: none;
+}
+.mobileSlider{
+
+height: 320px;
+margin-top: 70px;
+background-color: whitesmoke;
+}
+.BtnBox{
+   
+    height: 40px;
+}
+.mobileSliderImage{
+    
+}
+.MobilePageManuBtn{
+
+margin-left: 10px;
+margin-top: 5px;
+font-size: 13px;
+cursor: pointer;
+color:  rgb(17, 56, 46);
+font-weight: 400;
+}
+.MobilePageManuBtn:hover{
+    color:  rgb(71, 128, 113);
+    text-decoration: none;
+}
+.MobilePageManuFirstBtn{
+    float: left;
+    color:  rgb(17, 56, 46);
+    font-size: 15px;
+cursor: pointer;
+font-weight: 700;
+text-decoration: none;
+}
+.MobileCardHeading{
+   margin-left: 30px;
+    height: 20px;
+}
+.MobileCardHeading2{
+   margin-left: 30px;
+    
+    height: 40px;
+    color:  rgb(17, 56, 46);
+    font-size: 30px;
+    
+    font-weight: 700;
+   
+}
+.MobileCard{
+    border:  1px solid black;
+    height: 400px;
+    
+    
+
+}
+.Mobilefilter{
+    color:  rgb(17, 56, 46);
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: 500;
+    margin-top: 30px;
+   
+}
+.Filter{
+    /* border-bottom: 5px solid gray; */
+    color:  rgb(17, 56, 46);
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: 600;
+}
+.Filter:hover{
+    color:  rgb(17, 56, 46);
+    text-decoration: none;
+}
+.Line{
+    border-top: 5px solid grey;
+}
+.MobileColspaceLink{
+    color: grey;
+}
+.MobileColspaceLink:hover{
+color:  rgb(17, 56, 46) ;
+text-decoration: none;
+}
+/* .OneLine{
+    float: left;
+} */
+.MobileRightBox{
+    height: 400px;
+    border:  1px solid black;
+    margin-left: 330px;
+    margin-top: -400px;
+}
+.MobileContainer{
+    border: 1px solid black;
+    height: 400px;
+    margin-right: 100px;
+}
+.MobileContainer1{
+    border: 1px solid black;
+    height: 400px;
+    float: left;
+}
+.Box{
+    /* border: 1px solid black; */
+    margin-top: 10px;
+}
+.MobileSliderCardHeight{
+    height: 170px;
+}
+.MobileSliderCardSpace{
+    margin-top: 20px;
+   
+}
+.MobileSliderCardHeight2{
+    height: 270px;
+}
+.MobileCardSliderButton{
+    background-color:  rgb(17, 56, 46) ;
+    color: white;
+    font-weight: bolder;
+    height: 40px;
+    border-color: rgb(17, 56, 46);
+}
+.MobileCardSliderButton:hover{
+    background-color: white ;
+    color:  rgb(17, 56, 46);
+}
+.MobileSliderCardHeight3{
+    height: 350px;
+}
+.CardManu{
+    float: left;
+    margin-left: 1px;
+}
+.CardMan2{
+    
+    margin-left: 150px;
+}
+.MobileSliderCardHeight4{
+    height: 700px;
 }

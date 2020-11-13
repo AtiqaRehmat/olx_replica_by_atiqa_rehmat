@@ -1,0 +1,768 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\ul\b\f0\fs22 material ui card \ulnone\b0\par
+import React from 'react';\par
+import \{ makeStyles \} from '@material-ui/core/styles';\par
+import clsx from 'clsx';\par
+import Card from '@material-ui/core/Card';\par
+import CardHeader from '@material-ui/core/CardHeader';\par
+import CardMedia from '@material-ui/core/CardMedia';\par
+import CardContent from '@material-ui/core/CardContent';\par
+import CardActions from '@material-ui/core/CardActions';\par
+import Collapse from '@material-ui/core/Collapse';\par
+import Avatar from '@material-ui/core/Avatar';\par
+import IconButton from '@material-ui/core/IconButton';\par
+import Typography from '@material-ui/core/Typography';\par
+import \{ red \} from '@material-ui/core/colors';\par
+import FavoriteIcon from '@material-ui/icons/Favorite';\par
+import ShareIcon from '@material-ui/icons/Share';\par
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';\par
+import MoreVertIcon from '@material-ui/icons/MoreVert';\par
+\par
+const useStyles = makeStyles((theme) => (\{\par
+  root: \{\par
+    maxWidth: 345,\par
+  \},\par
+  media: \{\par
+    height: 0,\par
+    paddingTop: '56.25%', // 16:9\par
+  \},\par
+  expand: \{\par
+    transform: 'rotate(0deg)',\par
+    marginLeft: 'auto',\par
+    transition: theme.transitions.create('transform', \{\par
+      duration: theme.transitions.duration.shortest,\par
+    \}),\par
+  \},\par
+  expandOpen: \{\par
+    transform: 'rotate(180deg)',\par
+  \},\par
+  avatar: \{\par
+    backgroundColor: red[500],\par
+  \},\par
+\}));\par
+\par
+export default function RecipeReviewCard() \{\par
+  const classes = useStyles();\par
+  const [expanded, setExpanded] = React.useState(false);\par
+\par
+  const handleExpandClick = () => \{\par
+    setExpanded(!expanded);\par
+  \};\par
+\par
+  return (\par
+    <Card className=\{classes.root\}>\par
+      <CardHeader\par
+        avatar=\{\par
+          <Avatar aria-label="recipe" className=\{classes.avatar\}>\par
+            R\par
+          </Avatar>\par
+        \}\par
+        action=\{\par
+          <IconButton aria-label="settings">\par
+            <MoreVertIcon />\par
+          </IconButton>\par
+        \}\par
+        title="Shrimp and Chorizo Paella"\par
+        subheader="September 14, 2016"\par
+      />\par
+      <CardMedia\par
+        className=\{classes.media\}\par
+        image="/static/images/cards/paella.jpg"\par
+        title="Paella dish"\par
+      />\par
+      <CardContent>\par
+        <Typography variant="body2" color="textSecondary" component="p">\par
+          This impressive paella is a perfect party dish and a fun meal to cook together with your\par
+          guests. Add 1 cup of frozen peas along with the mussels, if you like.\par
+        </Typography>\par
+      </CardContent>\par
+      <CardActions disableSpacing>\par
+        <IconButton aria-label="add to favorites">\par
+          <FavoriteIcon />\par
+        </IconButton>\par
+        <IconButton aria-label="share">\par
+          <ShareIcon />\par
+        </IconButton>\par
+        <IconButton\par
+          className=\{clsx(classes.expand, \{\par
+            [classes.expandOpen]: expanded,\par
+          \})\}\par
+          onClick=\{handleExpandClick\}\par
+          aria-expanded=\{expanded\}\par
+          aria-label="show more"\par
+        >\par
+          <ExpandMoreIcon />\par
+        </IconButton>\par
+      </CardActions>\par
+      <Collapse in=\{expanded\} timeout="auto" unmountOnExit>\par
+        <CardContent>\par
+          <Typography paragraph>Method:</Typography>\par
+          <Typography paragraph>\par
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10\par
+            minutes.\par
+          </Typography>\par
+          <Typography paragraph>\par
+            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high\par
+            heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly\par
+            browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken\par
+            and chorizo in the pan. Add piment\'f3n, bay leaves, garlic, tomatoes, onion, salt and\par
+            pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add\par
+            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.\par
+          </Typography>\par
+          <Typography paragraph>\par
+            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook\par
+            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to\par
+            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook\par
+            again without stirring, until mussels have opened and rice is just tender, 5 to 7\par
+            minutes more. (Discard any mussels that don\rquote t open.)\par
+          </Typography>\par
+          <Typography>\par
+            Set aside off of the heat to let rest for 10 minutes, and then serve.\par
+          </Typography>\par
+        </CardContent>\par
+      </Collapse>\par
+    </Card>\par
+  );\par
+\}\par
+\par
+\ul\b\par
+bootstrap slider\ulnone\b0\par
+\par
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">\par
+  <div class="carousel-inner">\par
+    <div class="carousel-item active" data-interval="10000">\par
+      <img src="..." class="d-block w-100" alt="...">\par
+    </div>\par
+    <div class="carousel-item" data-interval="2000">\par
+      <img src="..." class="d-block w-100" alt="...">\par
+    </div>\par
+    <div class="carousel-item">\par
+      <img src="..." class="d-block w-100" alt="...">\par
+    </div>\par
+  </div>\par
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">\par
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>\par
+    <span class="sr-only">Previous</span>\par
+  </a>\par
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">\par
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>\par
+    <span class="sr-only">Next</span>\par
+  </a>\par
+</div>\par
+\par
+\par
+\ul\b bootstrap 3 cards group\ulnone\b0\par
+\par
+<div class="card-deck">\par
+  <div class="card">\par
+    <img src="..." class="card-img-top" alt="...">\par
+    <div class="card-body">\par
+      <h5 class="card-title">Card title</h5>\par
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\par
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\par
+    </div>\par
+  </div>\par
+  <div class="card">\par
+    <img src="..." class="card-img-top" alt="...">\par
+    <div class="card-body">\par
+      <h5 class="card-title">Card title</h5>\par
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\par
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\par
+    </div>\par
+  </div>\par
+  <div class="card">\par
+    <img src="..." class="card-img-top" alt="...">\par
+    <div class="card-body">\par
+      <h5 class="card-title">Card title</h5>\par
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\par
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\par
+    </div>\par
+  </div>\par
+</div>\par
+\par
+\ul\b bootstrap 4 card group\ulnone\b0\par
+\par
+<div class="row row-cols-1 row-cols-md-3">\par
+  <div class="col mb-4">\par
+    <div class="card">\par
+      <img src="..." class="card-img-top" alt="...">\par
+      <div class="card-body">\par
+        <h5 class="card-title">Card title</h5>\par
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\par
+      </div>\par
+    </div>\par
+  </div>\par
+  <div class="col mb-4">\par
+    <div class="card">\par
+      <img src="..." class="card-img-top" alt="...">\par
+      <div class="card-body">\par
+        <h5 class="card-title">Card title</h5>\par
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\par
+      </div>\par
+    </div>\par
+  </div>\par
+  <div class="col mb-4">\par
+    <div class="card">\par
+      <img src="..." class="card-img-top" alt="...">\par
+      <div class="card-body">\par
+        <h5 class="card-title">Card title</h5>\par
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>\par
+      </div>\par
+    </div>\par
+  </div>\par
+  <div class="col mb-4">\par
+    <div class="card">\par
+      <img src="..." class="card-img-top" alt="...">\par
+      <div class="card-body">\par
+        <h5 class="card-title">Card title</h5>\par
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\par
+      </div>\par
+    </div>\par
+  </div>\par
+</div>\par
+\par
+\par
+\ul\b\par
+bootstarap 1 card\ulnone\b0\par
+\par
+<div class="card border-success mb-3" style="max-width: 18rem;">\par
+  <div class="card-header bg-transparent border-success">Header</div>\par
+  <div class="card-body text-success">\par
+    <h5 class="card-title">Success card title</h5>\par
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\par
+  </div>\par
+  <div class="card-footer bg-transparent border-success">Footer</div>\par
+</div>\par
+\par
+\par
+\ul\b icons\ulnone\b0\par
+import InstagramIcon from '@material-ui/icons/Instagram';\par
+\par
+import FacebookIcon from '@material-ui/icons/Facebook';\par
+\par
+import TwitterIcon from '@material-ui/icons/Twitter';\par
+\par
+import YouTubeIcon from '@material-ui/icons/YouTube';\par
+\par
+\par
+\par
+\par
+  //slider with cards\par
+\{/* <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">\par
+  <div className="carousel-inner">\par
+    <div className="carousel-item active" data-interval="10000">\par
+      <img src="..." className="d-block w-100" alt="..."/>\par
+      <div className="box container-fluid col-10 " >\par
+<div className="card-deck">\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+</div>\par
+\par
+                \par
+                </div>\par
+    </div>\par
+    <div className="carousel-item" data-interval="2000">\par
+      <img src="..." className="d-block w-100" alt="..."/>\par
+\par
+      <div className="box container-fluid col-10 " >\par
+<div className="card-deck">\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+</div>\par
+\par
+                \par
+                </div>\par
+    </div>\par
+    <div className="carousel-item">\par
+      <img src="..." className="d-block w-100" alt="..."/>\par
+      <div className="card-deck">\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-deck">\par
+  <div className="card">\par
+    <img src="..." class="card-img-top" alt="..."/>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  </div>\par
+    <div className="card-body">\par
+      <h5 className="card-title">Card title</h5>\par
+      <p className="card-text">?</p>\par
+      <p className="card-text"><small class="text-muted">?</small></p>\par
+    </div>\par
+  </div>\par
+  </div>\par
+    </div>\par
+  </div>\par
+  <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">\par
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>\par
+    <span className="sr-only">Previous</span>\par
+  </a>\par
+  <a className="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">\par
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>\par
+    <span className="sr-only">Next</span>\par
+  </a>\par
+</div> */\}\par
+\par
+\par
+\par
+\ul\b drop list\ulnone\b0\par
+\par
+<!-- Large button groups (default and split) -->\par
+<div class="btn-group">\par
+  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\par
+    Large button\par
+  </button>\par
+  <div class="dropdown-menu">\par
+    ...\par
+  </div>\par
+</div>\par
+<div class="btn-group">\par
+  <button class="btn btn-secondary btn-lg" type="button">\par
+    Large split button\par
+  </button>\par
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\par
+    <span class="sr-only">Toggle Dropdown</span>\par
+  </button>\par
+  <div class="dropdown-menu">\par
+    ...\par
+  </div>\par
+</div>\par
+\par
+<!-- Small button groups (default and split) -->\par
+<div class="btn-group">\par
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\par
+    Small button\par
+  </button>\par
+  <div class="dropdown-menu">\par
+    ...\par
+  </div>\par
+</div>\par
+<div class="btn-group">\par
+  <button class="btn btn-secondary btn-sm" type="button">\par
+    Small split button\par
+  </button>\par
+  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\par
+    <span class="sr-only">Toggle Dropdown</span>\par
+  </button>\par
+  <div class="dropdown-menu">\par
+    ...\par
+  </div>\par
+</div>\par
+\par
+\ul\b Droplist WWW\ulnone\b0\par
+step 1 \par
+\par
+<div class="navbar">\par
+  <a href="#home">Home</a>\par
+  <a href="#news">News</a>\par
+  <div class="dropdown">\par
+    <button class="dropbtn">Dropdown\par
+      <i class="fa fa-caret-down"></i>\par
+    </button>\par
+    <div class="dropdown-content">\par
+      <div class="header">\par
+        <h2>Mega Menu</h2>\par
+      </div>\par
+      <div class="row">\par
+        <div class="column">\par
+          <h3>Category 1</h3>\par
+          <a href="#">Link 1</a>\par
+          <a href="#">Link 2</a>\par
+          <a href="#">Link 3</a>\par
+        </div>\par
+        <div class="column">\par
+          <h3>Category 2</h3>\par
+          <a href="#">Link 1</a>\par
+          <a href="#">Link 2</a>\par
+          <a href="#">Link 3</a>\par
+        </div>\par
+        <div class="column">\par
+          <h3>Category 3</h3>\par
+          <a href="#">Link 1</a>\par
+          <a href="#">Link 2</a>\par
+          <a href="#">Link 3</a>\par
+        </div>\par
+      </div>\par
+    </div>\par
+  </div>\par
+</div>\par
+\par
+step 2\par
+/* Navbar container */\par
+.navbar \{\par
+  overflow: hidden;\par
+  background-color: #333;\par
+  font-family: Arial;\par
+\}\par
+\par
+/* Links inside the navbar */\par
+.navbar a \{\par
+  float: left;\par
+  font-size: 16px;\par
+  color: white;\par
+  text-align: center;\par
+  padding: 14px 16px;\par
+  text-decoration: none;\par
+\}\par
+\par
+/* The dropdown container */\par
+.dropdown \{\par
+  float: left;\par
+  overflow: hidden;\par
+\}\par
+\par
+/* Dropdown button */\par
+.dropdown .dropbtn \{\par
+  font-size: 16px;\par
+  border: none;\par
+  outline: none;\par
+  color: white;\par
+  padding: 14px 16px;\par
+  background-color: inherit;\par
+  font: inherit; /* Important for vertical align on mobile phones */\par
+  margin: 0; /* Important for vertical align on mobile phones */\par
+\}\par
+\par
+/* Add a red background color to navbar links on hover */\par
+.navbar a:hover, .dropdown:hover .dropbtn \{\par
+  background-color: red;\par
+\}\par
+\par
+/* Dropdown content (hidden by default) */\par
+.dropdown-content \{\par
+  display: none;\par
+  position: absolute;\par
+  background-color: #f9f9f9;\par
+  width: 100%;\par
+  left: 0;\par
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\par
+  z-index: 1;\par
+\}\par
+\par
+/* Mega Menu header, if needed */\par
+.dropdown-content .header \{\par
+  background: red;\par
+  padding: 16px;\par
+  color: white;\par
+\}\par
+\par
+/* Show the dropdown menu on hover */\par
+.dropdown:hover .dropdown-content \{\par
+  display: block;\par
+\}\par
+\par
+/* Create three equal columns that floats next to each other */\par
+.column \{\par
+  float: left;\par
+  width: 33.33%;\par
+  padding: 10px;\par
+  background-color: #ccc;\par
+  height: 250px;\par
+\}\par
+\par
+/* Style links inside the columns */\par
+.column a \{\par
+  float: none;\par
+  color: black;\par
+  padding: 16px;\par
+  text-decoration: none;\par
+  display: block;\par
+  text-align: left;\par
+\}\par
+\par
+/* Add a background color on hover */\par
+.column a:hover \{\par
+  background-color: #ddd;\par
+\}\par
+\par
+/* Clear floats after the columns */\par
+.row:after \{\par
+  content: "";\par
+  display: table;\par
+  clear: both;\par
+\}\par
+\par
+\par
+\par
+\ul\b\fs40 material ui Slider Cards\ulnone\b0\fs22\par
+\par
+import React from 'react';\par
+import \{ makeStyles \} from '@material-ui/core/styles';\par
+import GridList from '@material-ui/core/GridList';\par
+import GridListTile from '@material-ui/core/GridListTile';\par
+import GridListTileBar from '@material-ui/core/GridListTileBar';\par
+import IconButton from '@material-ui/core/IconButton';\par
+import StarBorderIcon from '@material-ui/icons/StarBorder';\par
+import tileData from './tileData';\par
+\par
+const useStyles = makeStyles((theme) => (\{\par
+  root: \{\par
+    display: 'flex',\par
+    flexWrap: 'wrap',\par
+    justifyContent: 'space-around',\par
+    overflow: 'hidden',\par
+    backgroundColor: theme.palette.background.paper,\par
+  \},\par
+  gridList: \{\par
+    flexWrap: 'nowrap',\par
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.\par
+    transform: 'translateZ(0)',\par
+  \},\par
+  title: \{\par
+    color: theme.palette.primary.light,\par
+  \},\par
+  titleBar: \{\par
+    background:\par
+      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',\par
+  \},\par
+\}));\par
+\par
+/**\par
+ * The example data is structured as follows:\par
+ *\par
+ * import image from 'path/to/image.jpg';\par
+ * [etc...]\par
+ *\par
+ * const tileData = [\par
+ *   \{\par
+ *     img: image,\par
+ *     title: 'Image',\par
+ *     author: 'author',\par
+ *   \},\par
+ *   \{\par
+ *     [etc...]\par
+ *   \},\par
+ * ];\par
+ */\par
+export default function SingleLineGridList() \{\par
+  const classes = useStyles();\par
+\par
+  return (\par
+    <div className=\{classes.root\}>\par
+      <GridList className=\{classes.gridList\} cols=\{2.5\}>\par
+        \{tileData.map((tile) => (\par
+          <GridListTile key=\{tile.img\}>\par
+            <img src=\{tile.img\} alt=\{tile.title\} />\par
+            <GridListTileBar\par
+              title=\{tile.title\}\par
+              classes=\{\{\par
+                root: classes.titleBar,\par
+                title: classes.title,\par
+              \}\}\par
+              actionIcon=\{\par
+                <IconButton aria-label=\{`star $\{tile.title\}`\}>\par
+                  <StarBorderIcon className=\{classes.title\} />\par
+                </IconButton>\par
+              \}\par
+            />\par
+          </GridListTile>\par
+        ))\}\par
+      </GridList>\par
+    </div>\par
+  );\par
+\}\par
+\par
+\par
+\par
+\par
+\ul\b\fs40 Bootstrap Drop list\ulnone\b0\fs22\par
+\par
+<div class="dropdown">\par
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\par
+    Dropdown button\par
+  </button>\par
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">\par
+    <a class="dropdown-item" href="#">Action</a>\par
+    <a class="dropdown-item" href="#">Another action</a>\par
+    <a class="dropdown-item" href="#">Something else here</a>\par
+  </div>\par
+</div>\par
+\par
+\ul\b\fs44\par
+material ui Input\par
+\ulnone\b0\fs22\par
+import React from 'react';\par
+import \{ makeStyles \} from '@material-ui/core/styles';\par
+import TextField from '@material-ui/core/TextField';\par
+\par
+const useStyles = makeStyles((theme) => (\{\par
+  root: \{\par
+    '& > *': \{\par
+      margin: theme.spacing(1),\par
+      width: '25ch',\par
+    \},\par
+  \},\par
+\}));\par
+\par
+export default function BasicTextFields() \{\par
+  const classes = useStyles();\par
+\par
+  return (\par
+    <form className=\{classes.root\} noValidate autoComplete="off">\par
+      <TextField id="standard-basic" label="Standard" />\par
+      <TextField id="filled-basic" label="Filled" variant="filled" />\par
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />\par
+    </form>\par
+  );\par
+\}\par
+\par
+\ul\b\fs44 Check box material ui\ulnone\b0\fs22\par
+\par
+import React from 'react';\par
+import Checkbox from '@material-ui/core/Checkbox';\par
+\par
+export default function Checkboxes() \{\par
+  const [checked, setChecked] = React.useState(true);\par
+\par
+  const handleChange = (event) => \{\par
+    setChecked(event.target.checked);\par
+  \};\par
+\par
+  return (\par
+    <div>\par
+      <Checkbox\par
+        checked=\{checked\}\par
+        onChange=\{handleChange\}\par
+        inputProps=\{\{ 'aria-label': 'primary checkbox' \}\}\par
+      />\par
+      <Checkbox\par
+        defaultChecked\par
+        color="primary"\par
+        inputProps=\{\{ 'aria-label': 'secondary checkbox' \}\}\par
+      />\par
+      <Checkbox inputProps=\{\{ 'aria-label': 'uncontrolled-checkbox' \}\} />\par
+      <Checkbox disabled inputProps=\{\{ 'aria-label': 'disabled checkbox' \}\} />\par
+      <Checkbox disabled checked inputProps=\{\{ 'aria-label': 'disabled checked checkbox' \}\} />\par
+      <Checkbox\par
+        defaultChecked\par
+        indeterminate\par
+        inputProps=\{\{ 'aria-label': 'indeterminate checkbox' \}\}\par
+      />\par
+      <Checkbox\par
+        defaultChecked\par
+        color="default"\par
+        inputProps=\{\{ 'aria-label': 'checkbox with default color' \}\}\par
+      />\par
+      <Checkbox\par
+        defaultChecked\par
+        size="small"\par
+        inputProps=\{\{ 'aria-label': 'checkbox with small size' \}\}\par
+      />\par
+    </div>\par
+  );\par
+\}\par
+\par
+\ul\b\fs44\par
+bootstrap Collapse\ulnone\b0\fs22\par
+\par
+<div class="accordion" id="accordionExample">\par
+  <div class="card">\par
+    <div class="card-header" id="headingOne">\par
+      <h2 class="mb-0">\par
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">\par
+          Collapsible Group Item #1\par
+        </button>\par
+      </h2>\par
+    </div>\par
+\par
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">\par
+      <div class="card-body">\par
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\par
+      </div>\par
+    </div>\par
+  </div>\par
+  <div class="card">\par
+    <div class="card-header" id="headingTwo">\par
+      <h2 class="mb-0">\par
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">\par
+          Collapsible Group Item #2\par
+        </button>\par
+      </h2>\par
+    </div>\par
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">\par
+      <div class="card-body">\par
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\par
+      </div>\par
+    </div>\par
+  </div>\par
+  <div class="card">\par
+    <div class="card-header" id="headingThree">\par
+      <h2 class="mb-0">\par
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">\par
+          Collapsible Group Item #3\par
+        </button>\par
+      </h2>\par
+    </div>\par
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">\par
+      <div class="card-body">\par
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\par
+      </div>\par
+    </div>\par
+  </div>\par
+</div>\par
+}
+ 
